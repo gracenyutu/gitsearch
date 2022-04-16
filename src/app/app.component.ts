@@ -15,14 +15,14 @@ export class AppComponent implements OnInit, OnDestroy{
 
   repos = []
   ngOnInit(): void{
-  this.getPublicReposWithSubscription()
+  this.getPublicReposWithPromise()
  }
   ngOnDestroy(): void {
   this.mySubscription.unsubscribe();
  }
-  getPublicReposWithSubscription(){
-  this.mySubscription.add(
-    this.apiService.getRepo("PulicRepo").subscription ((PulicRepo:any) => console.log (PulicRepo))
-  )
+ getPublicReposWithPromise():void{
+   this.apiService.getRepo('gracenyutu').then(( data: any)=>{
+     console.log(data)
+   })
  }
 }

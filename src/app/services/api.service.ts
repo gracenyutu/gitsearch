@@ -9,6 +9,9 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getRepo(username: string):any{
-    return this.http.get(`https://api.github.com/users/${username}/repos`)
-  }
+    const promise = new Promise((resolve, reject)=> {
+      resolve(this.http.get(`https://api.github.com/users/${username}/repos`).toPromise())
+  })
+   return promise
+ }
 }
