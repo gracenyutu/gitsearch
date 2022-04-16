@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ApiService } from './services/api.service';
 
@@ -11,6 +12,8 @@ export class AppComponent implements OnInit, OnDestroy{
   title = 'gitsearch';
   mySubscription: Subscription = new Subscription;
 
+  name = new FormControl()
+  
   constructor (private apiService: ApiService){}
 
   repos: any = []
