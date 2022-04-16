@@ -13,16 +13,17 @@ export class AppComponent implements OnInit, OnDestroy{
 
   constructor (private apiService: ApiService){}
 
-  repos = []
+  repos: any = []
   ngOnInit(): void{
-  this.getPublicReposWithPromise()
+   this.getPublicReposWithPromise()
  }
   ngOnDestroy(): void {
   this.mySubscription.unsubscribe();
  }
- getPublicReposWithPromise():void{
-   this.apiService.getRepo('gracenyutu').then(( data: any)=>{
-     console.log(data)
-   })
- }
+ async getPublicReposWithPromise():Promise<void>{
+   const repos = await this.apiService.getRepo('gracenyutu')
+   this.repos = repos
+   console.log(this.repos)
+   }
 }
+
