@@ -1,5 +1,7 @@
 # Gitsearch
 
+This is a simple application that searches for github users profiles and repositories using their username.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
 ## Development server
