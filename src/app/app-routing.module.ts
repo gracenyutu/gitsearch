@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { User } from './user'
-import { Repository } from './repository';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 

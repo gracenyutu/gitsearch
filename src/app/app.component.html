@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" routerLink="/">
     <img src="https://www.teenvio.com/es/wp-content/plugins/g1-social-icons/images/github/github-256.png" width="50" height="50" alt="logo">
-    {{ title }}
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -19,17 +18,5 @@
   </div>
 </nav>
 
-<div class="row">
-  <div class="col-md-5">
-    <form class="m-2" (submit)="searchRepos()">
-      <div class="mb-3">
-        <label for="name" class="form-label">Your Github Username</label>
-        <input formcontrol="name" type="text" class="form-control" placeholder="Eg. gracenyutu">
-        <button type="submit" class="btn btn-primary btn-block">Search</button>
-      </div>
-    </form>
-    <ol *ngFor="let repo of repos">
-      <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
-    </ol>
-  </div>
-</div>
+<app-user></app-user>
+<app-repository></app-repository>

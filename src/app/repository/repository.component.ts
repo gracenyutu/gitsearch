@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-repository',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
+  repos: any;
 
-  constructor() { }
+  constructor(private apiService: ApiService ) {
+    this.apiService.getUserRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
+  }
 
   ngOnInit(): void {
   }
