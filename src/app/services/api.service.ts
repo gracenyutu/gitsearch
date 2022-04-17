@@ -40,4 +40,8 @@ export class ApiService {
     )
     ;
   }
+
+  updateUser(username:string){
+    this.username = username
+  }
 }

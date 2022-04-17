@@ -1,6 +1,6 @@
 <form>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Enter username Eg. gracenyutu">
+    <input type="text" class="form-control" placeholder="Enter username Eg. gracenyutu" [(ngModel)]="username" name="username" (keyup)="findUser()">
   </div>
 </form>
 <div *ngIf="user">
