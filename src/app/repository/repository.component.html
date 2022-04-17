@@ -4,7 +4,8 @@
   </div>
   <div class="panel-body" *ngFor="let repo of repos">
     <p>
-    </p>
+      {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-success btn-sm float-end">View on Github</a></p>
+      <p>{{repo.description}}</p>
   </div>
 </div>
 
