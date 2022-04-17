@@ -8,14 +8,18 @@ import { ApiService } from '../services/api.service';
 })
 export class RepositoryComponent implements OnInit {
   repos: any;
+  repository: any;
 
   constructor(private apiService: ApiService ) {
+  }
+
+  findUser(){
+    this.apiService.updateRepo(this.repository);
     this.apiService.getUserRepos().subscribe(repos => {
       console.log(repos);
       this.repos = repos;
     });
   }
-
   ngOnInit(): void {
   }
 

@@ -12,6 +12,7 @@ export class ApiService {
   private username:string;
   private clientid = 'ad64f1a34d8ef30c6bf2';
   private clientsecret = 'cf54bcbbdf5160221d81bdc5bb3bb096d48980dc';
+  repository!: string;
 
   constructor(private http: HttpClient) {
     console.log("service  here!");
@@ -43,5 +44,9 @@ export class ApiService {
 
   updateUser(username:string){
     this.username = username
+  }
+
+  updateRepo(repository:string){
+    this.repository = repository
   }
 }
