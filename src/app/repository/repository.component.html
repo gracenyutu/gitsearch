@@ -8,9 +8,9 @@
     <h2>Repositories</h2>
   </div>
   <div class="panel-body" *ngFor="let repo of repos">
-    <p>
-      {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-success btn-sm float-end">View on Github</a></p>
-      <p>{{repo.description}}</p>
+    <p>{{repo.name}}</p>
+    <p><small>{{repo.html_url}}</small></p>
+    <p>{{repo.description}}</p>
   </div>
 </div>
 
