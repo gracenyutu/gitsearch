@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
