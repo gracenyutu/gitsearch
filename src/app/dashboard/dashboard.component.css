@@ -1,0 +1,19 @@
+.table {
+  background-color: black;
+  opacity: 0.8;
+  margin-top: 35px;
+  border-radius: 15px;
+}
+#tbody {
+  color: white;
+}
+.thead {
+  color: white;
+  font-weight: 300;
+}
+#buttons {
+  margin-top: 35px;
+}
+.btn {
+  border-radius: 10px;
+}
