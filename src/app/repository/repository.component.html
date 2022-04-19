@@ -1,12 +1,14 @@
-<form>
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Enter repository name" [(ngModel)]="repository" name="repository" (keyup)="findUser()">
-  </div>
-</form>
+<div id="first">
+  <p class="instruction">Search git profiles and repo details using Repo names</p>
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Enter repository name" [(ngModel)]="repository" name="repository" (keyup)="findUser()">
+    </div>
+  </form>
+</div>
+
 <div class="panel panel-default">
-  <div class="panel-heading">
-    <h2>Repositories</h2>
-  </div>
+  
   <div class="panel-body" *ngFor="let repo of repos">
     <p>{{repo.name}}</p>
     <p><small>{{repo.html_url}}</small></p>

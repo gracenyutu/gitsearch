@@ -1,0 +1,17 @@
+form {
+  border-radius: 10px;
+  border-color: royalblue;
+  border-width: 5px;
+  border-style: double;
+  margin-bottom: 10px;
+}
+.instruction {
+  font-size: x-large;
+  color: royalblue;
+}
+#first {
+  background-color: black;
+  opacity: 0.8;
+  margin-top: 15px;
+  border-radius: 10px;
+}
